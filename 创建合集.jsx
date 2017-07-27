@@ -1,6 +1,6 @@
-﻿        for (i = app.project.numItems; i > 0; i--) { //删除处理  
+﻿        for (i = app.project.numItems; i > 0; i--) {     //删除处理  重复操作影响    
           x = app.project.item(i);
-          if (x.name == "NewComp") {
+          if (x.name == "NewComp") {// 遍历项目  若存在该名合成  删除  
             x.remove();
           }
         }
