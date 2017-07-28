@@ -4,8 +4,8 @@
             x.remove();
           }
         }
-        var myComp = app.project.items.addComp("NewComp", 1920, 1080, 1, 5, 30);
-        myComp.openInViewer();
+        var myComp = app.project.items.addComp("NewComp", 1920, 1080, 1, 5, 30);//1是像素宽高比 5秒 30帧每秒
+        myComp.openInViewer();   
         thisSolid = myComp.layers.addSolid([0, 0, 0], "NewSolid", myComp.width, myComp.height, 1);
         thisAdjust = myComp.layers.addSolid([0, 0, 0], "NewAdjust", myComp.width, myComp.height, 1);
         thisAdjust.adjustmentLayer = true;
@@ -14,7 +14,7 @@
         thisLight.lightType = lightTypeArr[0]; //四种灯光类型,数组下标从0到3都可以.
         thisCamera = myComp.layers.addCamera("NewCamera", [0, 0]);
         thisPointText = myComp.layers.addText();
-        thisPointText.name = "NewPointText";
+        thisPointText.name = "NewPointText";//文字层分为直接创建的点文字以及一个矩形范围内的boxtext()
         thisBoxText = myComp.layers.addBoxText([400, 200]);
         thisBoxText.name = "NewBoxText";
         thisShapeLayer = myComp.layers.addShape();
